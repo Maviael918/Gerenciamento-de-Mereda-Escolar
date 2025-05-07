@@ -38,6 +38,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 });
 
 // Formulário de Escolas
+<<<<<<< HEAD
 document.getElementById('form-escola').addEventListener('submit', e => {
     e.preventDefault();
     const nome = document.getElementById('nome-escola').value.trim();
@@ -53,10 +54,21 @@ document.getElementById('form-escola').addEventListener('submit', e => {
         renderEscolas();
         renderEscolasVisualizacao();
         populateSelects();
+=======
+document.getElementById('form-escola').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const nomeEscola = document.getElementById('nome-escola').value;
+    if (nomeEscola.trim() !== '') {
+        alert(`Escola "${nomeEscola}" cadastrada com sucesso!`);
+        document.getElementById('nome-escola').value = ''; // Limpa o campo
+    } else {
+        alert('Por favor, insira o nome da escola.');
+>>>>>>> bfa52b9 (Commit inicial do projeto)
     }
 });
 
 // Formulário de Produtos
+<<<<<<< HEAD
 document.getElementById('form-produto').addEventListener('submit', e => {
     e.preventDefault();
     const nome = document.getElementById('nome-produto').value.trim();
@@ -71,10 +83,21 @@ document.getElementById('form-produto').addEventListener('submit', e => {
         document.getElementById('form-produto').reset();
         renderProdutos();
         populateSelects();
+=======
+document.getElementById('form-produto').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const nomeProduto = document.getElementById('nome-produto').value;
+    if (nomeProduto.trim() !== '') {
+        alert(`Produto "${nomeProduto}" cadastrado com sucesso!`);
+        document.getElementById('nome-produto').value = ''; // Limpa o campo
+    } else {
+        alert('Por favor, insira o nome do produto.');
+>>>>>>> bfa52b9 (Commit inicial do projeto)
     }
 });
 
 // Formulário de Alocação
+<<<<<<< HEAD
 document.getElementById('form-alocacao').addEventListener('submit', e => {
     e.preventDefault();
     const escolaId = parseInt(document.getElementById('escola-alocacao').value);
@@ -95,6 +118,20 @@ document.getElementById('form-alocacao').addEventListener('submit', e => {
         document.getElementById('form-alocacao').reset();
         renderAlocacoes();
         renderEscolasVisualizacao();
+=======
+document.getElementById('form-alocacao').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const escola = document.getElementById('escola-alocacao').value;
+    const produto = document.getElementById('produto-alocacao').value;
+    const frise = document.getElementById('frise-alocacao').value;
+    const quantidade = document.getElementById('quantidade-alocacao').value;
+
+    if (escola && produto && frise && quantidade > 0) {
+        alert(`Produto "${produto}" alocado com sucesso na escola "${escola}" no Frise ${frise} com quantidade ${quantidade}!`);
+        document.getElementById('form-alocacao').reset(); // Limpa o formulário
+    } else {
+        alert('Por favor, preencha todos os campos corretamente.');
+>>>>>>> bfa52b9 (Commit inicial do projeto)
     }
 });
 

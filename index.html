@@ -8,7 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<<<<<<< HEAD
     <div class="container">
+=======
+    <!-- Tela de Login -->
+    <div id="login-screen" class="container">
+        <header>
+            <h1>Login - Gestão de Merenda Escolar</h1>
+        </header>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <div id="login-error" style="color: red; display: none;">Usuário ou senha incorretos!</div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div id="main-content" class="container" style="display: none;">
+>>>>>>> bfa52b9 (Commit inicial do projeto)
         <header>
             <h1>Gestão de Merenda Escolar</h1>
             <div class="creditos">Desenvolvido por Maviael Ananias</div>
@@ -104,5 +122,23 @@
     </div>
 
     <script src="app.js"></script>
+<<<<<<< HEAD
+=======
+    <script>
+        // Sistema de Login
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'maviael' && password === '8809') {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                document.getElementById('login-error').style.display = 'block';
+            }
+        });
+    </script>
+>>>>>>> bfa52b9 (Commit inicial do projeto)
 </body>
 </html>
